@@ -38,7 +38,7 @@ updating() {
 #Installing basic requirements
 install_basics() {
   echo "Installing some basic build tools"
-  sudo apt-get install -y build-essential python3-pip
+  sudo apt-get install -y build-essential python3-pip libgpiod2
 }
 
 #Installing Python specific requirements
