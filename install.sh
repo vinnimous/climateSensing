@@ -52,6 +52,7 @@ install_mysql() {
   echo "Installing items for mySql"
   sudo apt-get install -y apt-transport-https software-properties-common wget mariadb-server adduser libfontconfig1
   sudo apt-get install -y python3-mysqldb
+}
 
 #Selecing which Grafana package to install based on Raspberry Pi architecture
 install_grafana() {
