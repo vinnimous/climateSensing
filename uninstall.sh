@@ -32,7 +32,7 @@ get_arch() {
 
 uninstall_mysql() {
   echo "Installing items for mySql"
-  sudo apt-get remove -y mariadb-server python-mysqldb
+  sudo apt-get remove -y mariadb-server python3-mysqldb
 }
 
 uninstall_grafana() {
