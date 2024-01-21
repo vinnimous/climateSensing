@@ -44,7 +44,7 @@ install_basics() {
 #Installing Python specific requirements
 install_requirements() {
   echo "Installing requirements"
-  pip3 install -r requirements.txt
+  pip3 install -r requirements.txt --break-system-packages
 }
 
 #Installing MySQL

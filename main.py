@@ -13,7 +13,6 @@ logging.config.fileConfig(log_file_path)
 logger = logging.getLogger('main')
 
 logger.debug("Starting")
-relay.setup()
 run_for_ever = True
 upload_temps = True
 update_interval = 3600 #sleeping for 1 hour

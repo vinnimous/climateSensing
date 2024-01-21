@@ -13,7 +13,7 @@ def assess():
 
 def check_temp():
     global temperature, humidity
-    dht = adafruit_dht.DHT22(board.D2)
+    dht = adafruit_dht.DHT22(board.D2, use_pulseio=False)
 
     try:
         temperature = dht.temperature* (9 / 5) + 32
