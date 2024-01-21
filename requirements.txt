@@ -1,0 +1,5 @@
+RPi.GPIO
+adafruit_dht
+configparser
+pymysql
+logging-config
