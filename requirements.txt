@@ -1,5 +1,5 @@
 RPi.GPIO
-adafruit_dht
+adafruit-circuitpython-dht
 configparser
 pymysql
 logging-config

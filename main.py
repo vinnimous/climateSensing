@@ -5,10 +5,6 @@ import logging.config
 import time
 from os import path
 
-import schedule
-
-import relay
-
 from temperature import assess
 
 log_file_path = path.join(path.dirname(path.abspath(__file__)), 'logging.conf')
