@@ -2,9 +2,9 @@ FLUSH PRIVILEGES;
 
 CREATE DATABASE IF NOT EXISTS atticClimateDB;
 
-create user 'grafanauser'@'localhost' identified by 'grafanauserPW';
+CREATE USER IF NOT EXISTS 'grafanauser'@'localhost' identified BY 'grafanauserPW';
 
-grant all privileges on atticClimateDB.* to 'grafanauser'@'localhost';
+GRANT all privileges ON atticClimateDB.* TO 'grafanauser'@'localhost';
 
 FLUSH PRIVILEGES;
 
