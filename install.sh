@@ -106,7 +106,7 @@ check_grafana() {
 setup_mysql() {
   echo "Setting up mySql"
   sudo mysql_secure_installation
-  sudo mysql -u root -p <createDB.sql
+  sudo mysql -u root -p < createDB.sql
 }
 
 #Trying to create a cronjob
