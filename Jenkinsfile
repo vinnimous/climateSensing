@@ -25,6 +25,27 @@ pipeline {
   //     }
   //   }
 
+    stage('Setup') { // Install any dependencies you need to perform testing
+      steps {
+        withPythonEnv("python3"){
+          script {
+            sh """
+            pip install -r requirements.txt
+            """
+          }
+        }
+      }
+    }
+    // stage('Unit Testing') { // Perform unit testing
+    //   steps {
+    //     script {
+    //       sh """
+    //       python -m unittest discover -s tests/unit
+    //       """
+    //     }
+    //   }
+    // }
+
     stage ("Attempting security stages") {
       steps {
         shared()
