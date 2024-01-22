@@ -27,12 +27,11 @@ pipeline {
 
     stage('Setup') { // Install any dependencies you need to perform testing
       steps {
-        withPythonEnv("python3"){
-          script {
-            sh """
-            pip install -r requirements.txt
-            """
-          }
+        script {
+          sh """
+          python3 -m venv ./venv
+          pip install -r requirements.txt
+          """
         }
       }
     }
