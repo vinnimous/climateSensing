@@ -8,22 +8,6 @@ pipeline {
   }
 
   stages {
-  //   stage('Define host for deployment') {
-  //     steps {
-  //       script { 
-  //         properties([
-  //           parameters([
-  //             string(
-  //               defaultValue: '', 
-  //               description: "What is the IP address of the PI you which to deploy to?"
-  //               name: 'IP', 
-  //               trim: true
-  //             )
-  //           ])
-  //         ])
-  //       }
-  //     }
-  //   }
 
     stage('Setup') { // Install any dependencies you need to perform testing
       steps {
@@ -36,15 +20,6 @@ pipeline {
         }
       }
     }
-    // stage('Unit Testing') { // Perform unit testing
-    //   steps {
-    //     script {
-    //       sh """
-    //       python -m unittest discover -s tests/unit
-    //       """
-    //     }
-    //   }
-    // }
 
     stage ("Attempting security stages") {
       steps {
@@ -52,15 +27,8 @@ pipeline {
       }
     }
 
-    // stage("Attempting deployment") {
-    //   steps {
-    //     sh("""
-    //       grep -qxF 'ssh-keyscan ${params.IP}' ~/.ssh/known_hosts || ssh-keyscan  ${params.IP} >> ~/.ssh/known_hosts
-    //       scp your_path_to_the_file/the_file pi@${params.IP}:~/
-    //     """) 
-    //   }
-    // }
   }
+
   post { 
     always { 
         cleanWs()
